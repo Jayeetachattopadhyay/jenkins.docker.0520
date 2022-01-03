@@ -6,7 +6,7 @@ pipeline {
 	
 	environment {
 		PROJECT_ID = 'weighty-gasket-312413'
-                CLUSTER_NAME = 'k8s-cluster'
+                CLUSTER_NAME = 'k8-cluster'
                 LOCATION = 'us-central1-c'
                 CREDENTIALS_ID = 'kubernates'		
 	}
