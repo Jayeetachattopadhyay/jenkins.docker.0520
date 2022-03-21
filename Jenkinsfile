@@ -5,10 +5,10 @@ pipeline {
 	}
 	
 	environment {
-		PROJECT_ID = 'weighty-gasket-312413'
-                CLUSTER_NAME = 'k8-cluster'
+		PROJECT_ID = 'possible-sun-342923'
+                CLUSTER_NAME = 'my-first-cluster-1'
                 LOCATION = 'us-central1-c'
-                CREDENTIALS_ID = 'kubernates'		
+                CREDENTIALS_ID = 'kubernetes'		
 	}
 	
     stages {
@@ -35,7 +35,7 @@ pipeline {
 		    steps {
 			    sh 'whoami'
 			    script {
-				    myimage = docker.build("rajeshsvrn/devops:${env.BUILD_ID}")
+				    myimage = docker.build("raghukom/devops:${env.BUILD_ID}")
 			    }
 		    }
 	    }
@@ -44,8 +44,8 @@ pipeline {
 		    steps {
 			    script {
 				    echo "Push Docker Image"
-				    withCredentials([string(credentialsId: 'rajeshsvrn', variable: 'rajeshsvrn')]) {
-            				sh "docker login -u rajeshsvrn -p ${rajeshsvrn}"
+				    withCredentials([string(credentialsId: 'raghukom', variable: 'raghukom')]) {
+            				sh "docker login -u raghukom -p ${raghukom}"
 				    }
 				        myimage.push("${env.BUILD_ID}")
 				    
