@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp-app-loadbalancer
-     image: rajeshsvrn/devops:tagversion
+     image: raghukom/devops:tagversion
      ports:
      - containerPort: 8080
 
