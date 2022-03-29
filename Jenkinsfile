@@ -43,6 +43,7 @@ pipeline {
 	    
 	    stage("Push Docker Image") {
 		    steps {
+					echo "Docker"
 			    // script {
 				  //   echo "Push Docker Image"
 				  //   withCredentials([string(credentialsId: 'raghukom', variable: 'raghukom')]) {
