@@ -1,8 +1,8 @@
 pipeline {
     agent any
-	tools {
-		maven 'Maven'
-	}
+	// tools {
+	// 	maven 'Maven'
+	// }
 	
 	environment {
 		PROJECT_ID = 'possible-sun-342923'
