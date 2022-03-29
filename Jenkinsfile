@@ -34,7 +34,7 @@ pipeline {
 	    
 	    stage('Build Docker Image') {
 		    steps {
-			    sh 'whoami'
+			    echo 'whoami'
 			    // script {
 				  //   myimage = docker.build("raghukom/devops:${env.BUILD_ID}")
 			    // }
